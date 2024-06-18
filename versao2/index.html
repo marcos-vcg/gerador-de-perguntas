@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Gerador de Assuntos</title>
+
+    <!-- Atualiza a página a cada 60 segundos -->
+    <!-- <meta http-equiv="refresh" content="60" /> -->
+</head>
+
+<body>
+    <div class="row">
+        <section class="head">
+            <div class="col">
+                <div class="title">Gerador de Assuntos para Conversas</div>
+                <div class="subtitle">Uma forma simples de gerar perguntas para Iniciar Conversas</div>
+            </div>
+        </section>
+    </div>
+
+    <div class="row">
+        <section class="body">
+
+            <div class="row">
+                <div class="container col">
+
+                    <div class="container-title row">Forneça as informações</div>
+
+                    <div class="container-card row">
+                        <label for="formato" title="Defina a ocasião da conversa">Formato da Pergunta</label>
+
+                        <select name="formato" id="formato">
+                            <option value="random" selected>Aleatória</option>
+                            <option value="objetivas">Objetiva - Fechada</option>
+                            <option value="subjetivas">Subjetiva - Aberta</option>
+                        </select>
+                    </div>
+
+                    <div class="container-card row">
+                        <label for="conversa" title="Defina o Tipo de Conversa">Tipo de Conversa</label>
+                        
+                        <select name="conversa" id="conversa">
+                            <option value="random" selected>Aleatória</option>
+                            <option value="1">Roda de Amigos</option>
+                            <option value="2">Chat na Web</option>
+                            <option value="3">Papo em Família</option>
+                            <option value="4">Reunião de Trabalho</option>
+                        </select>
+                    </div>
+
+                    <div class="container-card row">
+                        <label for="categoria" title="Informe a Categoria">Categoria do Tema</label>
+                        
+                        <select name="categoria" id="categoria">
+                            <option value="random" selected>Aleatória</option>
+                            <option value="família">Família</option>
+                            <option value="viagens">Viagens</option>
+                            <option value="comidas">Comidas</option>
+                            <option value="pets">Pets</option>
+                            <option value="natureza">Natureza</option>
+                            <option value="4" disabled>Política</option>
+                            <option value="5" disabled>Religião</option>
+                            <option value="6" disabled>Polêmicas</option>
+                        </select>
+                    </div>
+
+                    
+                    <div class="row buttons-inline">
+                        <button class="button" onclick="generate()" onmouseover="">Gerar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="container col">
+
+                    <div class="container-title row">Sua pergunta fica assim</div>
+
+                    <div class="container-card row">
+                        <label for="response" title="Este é o tooltip">Copie e Cole na sua Conversa</label>
+                        <textarea name="response" id="response-box" rows="3" cols="40" readonly></textarea>
+                    </div>
+
+                    <div class="row buttons-inline">
+                        <button class=" button" onclick="copy()">Copiar</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <section class="footer row">
+        <h5>Desenvolvido por Marcos Costa. Exclusivo para uso sem fins lucrativos</h5>
+    </section>
+</body>
+
+<script src="script.js"></script>
+
+</html>
